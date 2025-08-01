@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hook Burger | هوك برجر - نكهة البرجر على أصولها</title>
+  <meta name="description" content="ألذ أنواع البرجر المشوي في سوريا. مكونات طازجة ونكهات أصيلة">
+  
+  <!-- Preload critical resources -->
+      <link rel="preload" href="images/hookburger-hero-grill-video.mp4" as="video">
+  <link rel="preload" href="burger_realistic_free.glb" as="fetch" crossorigin>
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" as="style">
+  
+  <!-- Favicon -->
+      <link rel="icon" href="images/hookburger-logo.png">
+  
+  <!-- Fonts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap">
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- 3D Model Viewer -->
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  
+  <!-- AOS Animation Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+
+
+  <!-- Navigation -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+              <img src="images/hookburger-logo.png" alt="Hook Burger" class="logo">
+      
+      <nav class="nav-menu" role="navigation">
+        <button class="nav-toggle" aria-label="Toggle menu" id="navToggle">
+          <span></span><span></span><span></span>
+        </button>
+        
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link">الرئيسية</a></li>
+          <li><a href="#about" class="nav-link">من نحن</a></li>
+          <li><a href="#menu" class="nav-link">القائمة</a></li>
+          <li><a href="#contact" class="nav-link">تواصل معنا</a></li>
+        </ul>
+      </nav>
+      
+      <a href="https://wa.me/+963996222278" class="cta-button" target="_blank">
+        <span class="cta-icon">📱</span>
+        <span class="cta-text">اطلب الآن</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+            <video class="hero-video" src="images/hookburger-hero-grill-video.mp4" autoplay loop muted playsinline preload="metadata"></video>
+    <div class="hero-overlay"></div>
+    
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="hero-subtitle">مرحباً بك في</span>
+        <img src="images/hookburger-logo.png" alt="Hook Burger" class="hero-logo">
+        <span class="hero-tagline">نكهة البرجر على أصولها</span>
+      </h1>
+      
+      <div class="hero-buttons">
+        <button class="btn btn-primary" onclick="scrollToSection('menu')">
+          <span>تصفح قائمتنا</span>
+          <span class="btn-icon">🍔</span>
+        </button>
+        <button class="btn btn-secondary" onclick="scrollToSection('about')">
+          <span>تعرف علينا</span>
+          <span class="btn-icon">👨‍🍳</span>
+        </button>
+      </div>
+      
+      <div class="hero-features">
+        <div class="feature">
+          <span class="feature-icon">🔥</span>
+          <span>مشوي على الفحم</span>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🥩</span>
+          <span>لحم طازج</span>
+        </div>
+        <div class="feature">
+          <span class="feature-icon">🌿</span>
+          <span>مكونات طبيعية</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="scroll-indicator">
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-content">
+        <div class="about-text"  data-aos-duration="800">
+          <h2 class="section-title">من نحن</h2>
+          <p class="about-description">
+            نحن في <strong>Hook Burger</strong> متخصصون في تقديم ألذ أنواع البرجر المشوي على الفحم.
+            نختار مكوناتنا بعناية فائقة، ونحضّر وجباتنا بشغف لتمنحك تجربة طعام فريدة لا تُنسى.
+          </p>
+          
+          <p class="about-description">
+            <strong>ميزتنا الفريدة:</strong> نصنع جميع صوصاتنا يدوياً في مطبخنا، من صوص الباربكيو المدخن إلى صوص الأفوكادو الطازج، 
+            كل صوص يحمل نكهة فريدة ومذاق لا يُنسى. صوصاتنا المصنوعة يدوياً هي سر تميزنا وسبب عودة عملائنا مراراً وتكراراً.
+          </p>
+          
+          <div class="about-features">
+            <div class="about-feature">
+              <div class="feature-number">15+</div>
+              <div class="feature-label">سنة خبرة</div>
+            </div>
+            <div class="about-feature">
+              <div class="feature-number">100%</div>
+              <div class="feature-label">لحم طازج</div>
+            </div>
+            <div class="about-feature">
+              <div class="feature-number">12+</div>
+              <div class="feature-label">صوص يدوي</div>
+            </div>
+          </div>
+          
+          <button class="btn btn-outline" onclick="scrollToSection('menu')">
+            <span>جرب قائمتنا</span>
+            <span class="btn-icon">→</span>
+          </button>
+        </div>
+        
+        <div class="about-model"  data-aos-duration="800">
+          <div class="model-container">
+            <div class="model-loading-overlay" id="modelLoadingOverlay">
+              <div class="model-loading-content">
+                <div class="model-loading-spinner"></div>
+                <h3>جاري تحميل النموذج ثلاثي الأبعاد</h3>
+                <p>يرجى الانتظار قليلاً...</p>
+                <div class="loading-progress">
+                  <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                  </div>
+                  <span class="progress-text" id="progressText">0%</span>
+                </div>
+              </div>
+            </div>
+            <model-viewer 
+              src="burger_realistic_free.glb" 
+              alt="3D Burger Model" 
+              auto-rotate 
+              camera-controls 
+              ar 
+              ar-modes="webxr scene-viewer quick-look"
+              loading="eager"
+              interaction-prompt="auto"
+              shadow-intensity="1.2"
+              environment-image="neutral"
+              exposure="1.1"
+              camera-orbit="0deg 75deg 75%"
+              min-camera-orbit="auto auto 50%"
+              max-camera-orbit="auto auto 100%"
+              camera-target="0m 0m 0m"
+              field-of-view="30deg"
+              min-field-of-view="20deg"
+              max-field-of-view="45deg"
+              animation-name=""
+              animation-crossfade-duration="0.5"
+              ar-scale="auto"
+              ar-placement="floor"
+              ar-button>
+              <button slot="ar-button" class="ar-button">
+                <span class="ar-icon">📱</span>
+                <span>عرض في الواقع المعزز</span>
+              </button>
+            </model-viewer>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header" >
+        <h2 class="section-title">قائمة الطعام</h2>
+        <p class="section-subtitle">اكتشف ألذ الأطباق المحضرة بأيدي خبرائنا</p>
+      </div>
+      
+      <!-- Menu Filter -->
+      <div class="menu-filter"  data-aos-delay="200">
+        <button class="filter-btn active" data-category="burger">
+          <span class="filter-icon">🍔</span>
+          <span>البرجر</span>
+        </button>
+        <button class="filter-btn" data-category="grill">
+          <span class="filter-icon">🔥</span>
+          <span>قريل</span>
+        </button>
+        <button class="filter-btn" data-category="crispy">
+          <span class="filter-icon">🍗</span>
+          <span>المقرمشات</span>
+        </button>
+        <button class="filter-btn" data-category="kids">
+          <span class="filter-icon">👶</span>
+          <span>وجبات الأطفال</span>
+        </button>
+        <button class="filter-btn" data-category="sides">
+          <span class="filter-icon">🍟</span>
+          <span>البطاطا المقلية</span>
+        </button>
+        <button class="filter-btn" data-category="sauces">
+          <span class="filter-icon">🥫</span>
+          <span>الصوصات اليدوية</span>
+        </button>
+        <button class="filter-btn" data-category="salads">
+          <span class="filter-icon">🥗</span>
+          <span>السلطات</span>
+        </button>
+      </div>
+      
+      <!-- Menu Grid -->
+      <div class="menu-grid"  data-aos-delay="400">
+        <!-- Burger Items -->
+        <article class="menu-item" data-category="burger"  data-aos-delay="50">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍔</span>
+            </div>
+            <div class="item-badge">الأكثر طلباً</div>
+          </div>
+          <div class="menu-item-content">
+            <h3>بيستو تشيكن برغر</h3>
+            <p>صدر دجاج مشوي مع صوص بيستو، فطر، بصل مكرمل، خس، مايونيز، خردل بالعسل، جبن</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 15 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="burger"  data-aos-delay="100">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍔</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>باربكيو تشيكن برغر</h3>
+            <p>قطعة فخذ دجاج مقلي، خس، بندورة، مايونيز، صوص باربكيو، صوص ثاوزند آيلند، مخلل، جبن، كول سلو</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 15 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="burger"  data-aos-delay="150">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍔</span>
+            </div>
+            <div class="item-badge">الأكثر طلباً</div>
+          </div>
+          <div class="menu-item-content">
+            <h3>كلاسيك برغر</h3>
+            <p>قطعة صدر دجاج مقلي مع خس، بندورة، مخلل، جبنة، مايونيز، صوص ثاوزند آيلند، كول سلو</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 12 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="burger"  data-aos-delay="200">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍔</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>هوك برغر </h3>
+            <p>قطعة فيليه سمك مقلي، جرجير، صوص تارتار</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 15 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="burger"  data-aos-delay="250">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍔</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>ترافل برغر</h3>
+            <p>قطعة لحم، صوص الفطر، جبنة، بصل مكرمل، خس، صوص مايونيز، خردل بالعسل</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 12 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="burger"  data-aos-delay="300">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍔</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>كلاسيك لحم برغر</h3>
+            <p>قطعة لحم، جبن، خس، بندورة، مخلل، صوص مايونيز، صوص ثاوزند آيلند</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 15 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+
+
+        <article class="menu-item" data-category="burger"  data-aos-delay="400">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍔</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>غودزيلا برغر</h3>
+            <p>قطعة لحم , قطع لحم  مع بصل وفلفل ألوان، صوص حار، خس، بندورة، فلفل هالبينو، جبن، صوص ثاوزند آيلند قطع دوريتوس، مايونيز</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 15 دقيقة</span>
+              <span class="spice-level">🌶️ حار</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="burger"  data-aos-delay="450">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍔</span>
+            </div>
+            <div class="item-badge">الأكثر طلباً</div>
+          </div>
+          <div class="menu-item-content">
+            <h3>ماجنوم برغر</h3>
+            <p>2 قطعة لحم، موتزاريلا مقلية، بصل مكرمل، فطر مكرمل، مايونيز، خردل عسل</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 18 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Grill Items -->
+        <article class="menu-item" data-category="grill"  data-aos-delay="500">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🔥</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>فهيتا</h3>
+            <p>قطع دجاج، بصل، فلفل ألوان، فطر، جبنة، سويا، صوص مايونيز، صوص أفوكادو</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 20 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="grill"  data-aos-delay="520">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🔥</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>مكسيكي</h3>
+            <p>قطع دجاج، بصل، فلفل ألوان، ذرة، فطر، صوص حار، جبنة، مايونيز، صوص أفوكادو</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 18 دقيقة</span>
+              <span class="spice-level">🌶️ حار</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="grill"  data-aos-delay="540">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🔥</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>فرانشيسكو</h3>
+            <p>قطع دجاج، ذرة، فطر، سويا، صوص جبنة، صوص خردل عسل</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 20 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="grill"  data-aos-delay="560">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🔥</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>فلادالفيا</h3>
+            <p>قطع لحم، بصل، فلفل أخضر، جبن، صوص مايونيز، صوص خردل عسل</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 18 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="grill"  data-aos-delay="580">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🔥</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>تشاينيز</h3>
+            <p>قطع لحم، بصل، فلفل ألوان، فطر، صوص حار، صوص سويا، سمسم، مايونيز، خردل عسل</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 20 دقيقة</span>
+              <span class="spice-level">🌶️ حار</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Crispy Items -->
+        <article class="menu-item" data-category="crispy"  data-aos-delay="750">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍗</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>كريسبي</h3>
+            <p>قطع دجاج مقرمشة وبطاطا مقلية</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 12 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="crispy"  data-aos-delay="800">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍗</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>سبايسي</h3>
+            <p>قطع دجاج مقلية حارة مع بطاطا مقلية</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 12 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="crispy"  data-aos-delay="850">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍗</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>زنجر</h3>
+            <p>قطع دجاج مقلية حارة مع جبن وبطاطا كول سلو</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 15 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="crispy"  data-aos-delay="900">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍗</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>سكالوب</h3>
+            <p>صدر دجاج مقلي وبطاطا مقلية كول سلو</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 10 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Kids Menu -->
+        <article class="menu-item" data-category="kids"  data-aos-delay="950">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">👶</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>وجبة الأطفال</h3>
+            <p>قطع ناغيت، بطاطا، صوص كتشب، مايونيز، عصير مع هدية للطفل</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 10 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Fries -->
+        <article class="menu-item" data-category="sides"  data-aos-delay="1000">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍟</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>فرايز عادي</h3>
+            <p>بطاطا مع بهارات، 4 أنواع صوص من اختيارك</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 8 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="sides"  data-aos-delay="1050">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍟</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>تشيز فرايز</h3>
+            <p>بطاطا مع بهارات، جبن، صوص جبن، 4 أنواع صوص من اختيارك</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 10 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="sides"  data-aos-delay="1100">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍟</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>تشيكن فرايز</h3>
+            <p>بطاطا مع بهارات وقطع دجاج مقلي، جبنة، صوص جبنة، هالبينو، 4 أنواع صوص من اختيارك</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 12 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="sides"  data-aos-delay="1150">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🍟</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>ميت فرايز</h3>
+            <p>بطاطا مع بهارات وقطع لحم مع الخضار، جبنة، صوص جبنة، هالبينو، 4 أنواع صوص من اختيارك</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 15 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Sauces -->
+        <article class="menu-item" data-category="sauces"  data-aos-delay="600">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🥫</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>مايونيز</h3>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ فوري</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="sauces"  data-aos-delay="620">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🥫</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>ثاوزند ايلاند</h3>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ فوري</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="sauces"  data-aos-delay="640">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🥫</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>هاني مسترد (خردل بالعسل)</h3>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ فوري</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="sauces"  data-aos-delay="660">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🥫</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>باربكيو صوص</h3>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ فوري</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="sauces"  data-aos-delay="680">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🥫</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>رانش صوص</h3>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ فوري</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="sauces"  data-aos-delay="700">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🥫</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>افوكا مايونيز</h3>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ فوري</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="sauces"  data-aos-delay="720">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🥫</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>داينامايت صوص</h3>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ فوري</span>
+              <span class="spice-level">🌶️ حار جداً</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="sauces"  data-aos-delay="740">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🥫</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>كاري صوص</h3>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ فوري</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="sauces"  data-aos-delay="760">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🥫</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>تارتار صوص</h3>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ فوري</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="sauces"  data-aos-delay="780">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🥫</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>كريم ثوم</h3>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ فوري</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="sauces"  data-aos-delay="800">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🥫</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>كتشب</h3>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ فوري</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="sauces"  data-aos-delay="820">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🥫</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>شطة</h3>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ فوري</span>
+              <span class="spice-level">🌶️ حار</span>
+            </div>
+          </div>
+        </article>
+
+
+
+        <!-- Salads -->
+        <article class="menu-item" data-category="salads"  data-aos-delay="840">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🥗</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>سلطة سيزر</h3>
+            <p>صدر دجاج مشوي مع خس، صوص سيزر، خبز، جبنة</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 8 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="salads"  data-aos-delay="860">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🥗</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>هوك سلطة</h3>
+            <p>ثمار البحر، فلفل أخضر وفلفل أحمر، بصل، زيتون، فطر، مخلل خيار، صوص خاص</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 10 دقيقة</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="menu-item" data-category="salads"  data-aos-delay="880">
+          <div class="menu-item-image">
+            <div class="image-placeholder">
+              <span class="placeholder-icon">🥗</span>
+            </div>
+          </div>
+          <div class="menu-item-content">
+            <h3>كول سلو</h3>
+            <p>سلطة ملفوف كلاسيكية مع مايونيز</p>
+            <div class="item-meta">
+              <span class="cooking-time">⏱️ 5 دقيقة</span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header" >
+        <h2 class="section-title">تواصل معنا</h2>
+        <p class="section-subtitle">نحن هنا لخدمتك على مدار الساعة</p>
+      </div>
+      
+      <div class="contact-content">
+        <div class="contact-info"  data-aos-duration="800">
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M17 2H7C5.9 2 5 2.9 5 4V20C5 21.1 5.9 22 7 22H17C18.1 22 19 21.1 19 20V4C19 2.9 18.1 2 17 2ZM17 20H7V4H17V20Z" fill="currentColor"/>
+                <path d="M12 18C13.1 18 14 17.1 14 16C14 14.9 13.1 14 12 14C10.9 14 10 14.9 10 16C10 17.1 10.9 18 12 18Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <h3>واتساب</h3>
+              <p><a href="https://wa.me/+963996222278" target="_blank">+963 996 222 278</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C8.13 2 5 5.13 5 9C5 14.25 12 22 12 22S19 14.25 19 9C19 5.13 15.87 2 12 2ZM12 11.5C10.62 11.5 9.5 10.38 9.5 9S10.62 6.5 12 6.5S14.5 7.62 14.5 9S13.38 11.5 12 11.5Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <h3>موقعنا</h3>
+              <p><a href="https://maps.app.goo.gl/DzzCZb7AdT1QHBST7" target="_blank">عرض على الخريطة</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6C22 4.9 21.1 4 20 4ZM20 8L12 13L4 8V6L12 11L20 6V8Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <h3>البريد الإلكتروني</h3>
+              <p><a href="mailto:hook1burger5@gmail.com">hook1burger5@gmail.com</a></p>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22S22 17.52 22 12S17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12S7.59 4 12 4S20 7.59 20 12S16.41 20 12 20Z" fill="currentColor"/>
+                <path d="M12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <h3>ساعات العمل</h3>
+              <p>الأحد - الخميس: 11:00 ص - 12:00 م</p>
+              <p>الجمعة - السبت: 12:00 م - 1:00 ص</p>
+            </div>
+          </div>
+          
+          <div class="contact-card">
+            <div class="contact-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 2C6.48 2 2 6.48 2 12S6.48 22 12 22S22 17.52 22 12S17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12S7.59 4 12 4S20 7.59 20 12S16.41 20 12 20Z" fill="currentColor"/>
+                <path d="M12 6C9.79 6 8 7.79 8 10C8 12.21 9.79 14 12 14C14.21 14 16 12.21 16 10C16 7.79 14.21 6 12 6ZM12 12C10.9 12 10 11.1 10 10C10 8.9 10.9 8 12 8C13.1 8 14 8.9 14 10C14 11.1 13.1 12 12 12Z" fill="currentColor"/>
+              </svg>
+            </div>
+            <div class="contact-details">
+              <h3>وسائل التواصل الاجتماعي</h3>
+              <div class="social-links-contact">
+                <a href="https://www.instagram.com/hook.burger_?igsh=MXd1NWc4cXAzYXE0eg==" target="_blank" class="social-link">
+                  <span class="social-icon">Instagram</span>
+                  <span>@hook.burger_</span>
+                </a>
+                <a href="https://www.facebook.com/share/16GEFJ25SX/" target="_blank" class="social-link">
+                  <span class="social-icon">Facebook</span>
+                  <span>Hook Burger</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-map">
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12096.0!2d35.921203!3d35.363329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDIxJzQ4LjQiTiAzNcKwNTUnMTYuNCJF!5e0!3m2!1str!2str!4v1710000000000!5m2!1str!2str" 
+              width="100%" 
+              height="400" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="map-overlay">
+              <a href="https://maps.app.goo.gl/DzzCZb7AdT1QHBST7" target="_blank" class="map-link">
+                <span class="map-icon">📍</span>
+                <span>اضغط هنا للوصول إلى موقعنا</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+                      <img src="images/hookburger-logo.png" alt="Hook Burger" class="footer-logo">
+          <p>نكهة البرجر على أصولها</p>
+        </div>
+        
+        <div class="footer-links">
+          <div class="footer-section">
+            <h4>روابط سريعة</h4>
+            <ul>
+              <li><a href="#hero">الرئيسية</a></li>
+              <li><a href="#about">من نحن</a></li>
+              <li><a href="#menu">القائمة</a></li>
+              <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h4>خدمة العملاء</h4>
+            <ul>
+                          <li><a href="https://wa.me/+963996222278" target="_blank">واتساب</a></li>
+            <li><a href="mailto:hook1burger5@gmail.com">البريد الإلكتروني</a></li>
+            <li><a href="https://www.instagram.com/hook.burger_?igsh=MXd1NWc4cXAzYXE0eg==" target="_blank">انستغرام</a></li>
+            <li><a href="https://maps.app.goo.gl/DzzCZb7AdT1QHBST7" target="_blank">موقعنا</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2025 Hook Burger. جميع الحقوق محفوظة.</p>
+        <div class="social-links">
+          <a href="https://www.facebook.com/share/16GEFJ25SX/" target="_blank" aria-label="Facebook" class="social-link-footer">
+            <span class="social-icon-footer">📘</span>
+          </a>
+          <a href="https://www.instagram.com/hook.burger_?igsh=MXd1NWc4cXAzYXE0eg==" target="_blank" aria-label="Instagram" class="social-link-footer">
+            <span class="social-icon-footer">📷</span>
+          </a>
+          <a href="https://wa.me/+963996222278" target="_blank" aria-label="WhatsApp" class="social-link-footer">
+            <span class="social-icon-footer">📱</span>
+          </a>
+        </div>
+        <div class="dev-tag" id="devTag">
+          <img src="images/logo white.png" alt="Fanari Labs" class="dev-logo">
+          <span>Developed by Fanari Labs</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating CTA -->
+  <div class="floating-cta" id="floatingCta">
+    <button class="floating-btn" onclick="scrollToTop()">
+      <span class="floating-icon">↑</span>
+    </button>
+  </div>
+
+
+
+  <!-- Dev Popup -->
+  <div class="dev-popup" id="devPopup">
+    <div class="dev-popup-content">
+      <div class="dev-popup-header">
+        <div class="dev-popup-brand">
+          <h3>Fanari Labs</h3>
+        </div>
+        <button class="dev-popup-close" id="devPopupClose">×</button>
+      </div>
+      <div class="dev-popup-body">
+        <div class="dev-info">
+          <div class="dev-contact-item">
+            <span class="dev-icon">📞</span>
+            <div class="dev-contact-details">
+              <span class="dev-contact-label">Phone</span>
+              <a href="tel:+905379295163">+90 537 929 51 63</a>
+            </div>
+          </div>
+          <div class="dev-contact-item">
+            <span class="dev-icon">✉️</span>
+            <div class="dev-contact-details">
+              <span class="dev-contact-label">Email</span>
+              <a href="mailto:fanarilabs@gmail.com">fanarilabs@gmail.com</a>
+            </div>
+          </div>
+          <div class="dev-contact-item">
+            <span class="dev-icon">🌐</span>
+            <div class="dev-contact-details">
+              <span class="dev-contact-label">Website</span>
+              <a href="https://fanarilabs.com" target="_blank" rel="noopener">fanarilabs.com</a>
+            </div>
+          </div>
+        </div>
+        <div class="dev-footer">
+          <p>AI Agents & Web Development</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html> 
