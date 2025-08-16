@@ -62,6 +62,15 @@ function initializeNavigation() {
   // Smooth scroll for navigation links
   navLinks.forEach(link => {
     link.addEventListener('click', function(e) {
+      const targetId = this.getAttribute('href');
+      
+      // Check if it's an external link (not an anchor)
+      if (targetId.includes('.html') || targetId.includes('http')) {
+        // Allow external links to work normally
+        return;
+      }
+      
+      // Prevent default only for anchor links
       e.preventDefault();
       
       // Close mobile menu if open
@@ -70,7 +79,6 @@ function initializeNavigation() {
         navToggle.classList.remove('active');
       }
       
-      const targetId = this.getAttribute('href');
       const targetSection = document.querySelector(targetId);
       
       if (targetSection) {
