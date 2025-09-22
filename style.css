@@ -19,6 +19,11 @@
   --shadow-medium: rgba(0, 0, 0, 0.1);
   --shadow-heavy: rgba(0, 0, 0, 0.15);
   
+  /* Enhanced Gradients */
+  --gradient-primary: linear-gradient(135deg, #d4af37 0%, #b8941f 100%);
+  --gradient-overlay: linear-gradient(45deg, rgba(44, 62, 80, 0.8) 0%, rgba(52, 73, 94, 0.6) 100%);
+  --gradient-card: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  
   /* Typography */
   --font-family: 'Tajawal', Arial, sans-serif;
   --font-size-xs: 0.875rem;
@@ -62,6 +67,60 @@ body {
   color: var(--text-dark);
   line-height: 1.6;
   overflow-x: hidden;
+  /* Enhanced smooth scrolling */
+  scroll-behavior: smooth;
+}
+
+/* ===== ENHANCED ANIMATIONS ===== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200px 0;
+  }
+  100% {
+    background-position: calc(200px + 100%) 0;
+  }
 }
 
 .container {
@@ -83,6 +142,7 @@ body {
   right: 0;
   z-index: 1000;
   transition: all var(--transition-normal);
+  backdrop-filter: blur(10px);
 }
 
 .navbar .container {
@@ -96,6 +156,7 @@ body {
   height: 50px;
   width: auto;
   transition: transform var(--transition-fast);
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
 }
 
 .logo:hover {
@@ -129,8 +190,10 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-  color: var(--primary);
-  background: var(--primary-light);
+  color: var(--white);
+  background: var(--gradient-primary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
 }
 
 .nav-link::after {
@@ -185,7 +248,8 @@ body {
 .cta-button:hover {
   background: var(--primary-dark);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(228, 176, 53, 0.4);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  animation: pulse 0.6s ease-in-out;
 }
 
 /* ===== HERO SECTION ===== */
@@ -663,6 +727,13 @@ model-viewer {
   min-width: 120px;
   justify-content: center;
   will-change: transform;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  touch-action: manipulation;
+  position: relative;
+  overflow: hidden;
   contain: layout style;
 }
 

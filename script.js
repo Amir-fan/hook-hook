@@ -125,7 +125,10 @@ function initializeMenuFilter() {
   });
   
   filterButtonsArray.forEach(button => {
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      
       if (isFiltering) return; // Prevent rapid clicks
       
       const category = this.getAttribute('data-category');
@@ -137,6 +140,7 @@ function initializeMenuFilter() {
       filterButtonsArray.forEach(btn => {
         btn.classList.remove('active');
         btn.style.transform = 'translateY(0)';
+        btn.style.pointerEvents = 'none'; // Disable during transition
       });
       this.classList.add('active');
       
@@ -167,9 +171,12 @@ function initializeMenuFilter() {
           delay += 30; // Reduced delay for faster response
         });
         
-        // Reset filtering state
+        // Reset filtering state and re-enable buttons
         setTimeout(() => {
           isFiltering = false;
+          filterButtonsArray.forEach(btn => {
+            btn.style.pointerEvents = 'auto'; // Re-enable after transition
+          });
         }, delay + 100);
       });
       
