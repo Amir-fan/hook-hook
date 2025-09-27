@@ -863,6 +863,20 @@ model-viewer {
   flex-wrap: wrap;
 }
 
+/* Coming Soon Badge */
+.coming-soon {
+  background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+  color: white;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  margin-right: 8px;
+  display: inline-block;
+  animation: pulse 2s infinite;
+  box-shadow: 0 2px 8px rgba(255, 107, 107, 0.3);
+}
+
 .order-btn {
   width: 100%;
   background: var(--primary);
